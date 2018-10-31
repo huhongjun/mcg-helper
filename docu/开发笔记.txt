@@ -1,0 +1,31 @@
+开发环境
+	JDK 1.8 64位
+	maven 3.5.4
+	Eclipse 4.9 Java EE Developer
+	
+命令行
+	mvn package
+	mvn eclise:eclipse
+	
+IDE
+	Eclipse 导入Maven项目
+	Eclipse 导入Eclipse项目，depreciated warning设置
+	
+部署
+	mcg.war放到tomcat webapps目录下，启动tomcat
+	http://localhost:8088/mcg
+
+说明
+	系统不需要数据库；
+	各种节点把代码生成过程流程化、节点化。节点本身可以输入数据、处理数据、输出文本。节点运行机制可以是预先开发的、设计时写入代码的，现在支持js、python、java模板
+	整个系统可以分两部分：设计环境、运行环境
+	云端系统，全部通过Web实现
+	流程节点执行日志可在线跟踪
+
+思考
+	设计环境与运行引擎分开考虑 =》导出的流程可以用运行引擎独立执行
+	前后端分离：前端JS，后端数据模型、访问接口
+	在服务端运行，如果配合自动化版本管理、源码编译、发布，就可以成为云端开发平台
+	可以考虑和Eclipse的CloudIDE集成
+
+	原理： Java环境收集和输入数据，通过JS、python解释器执行脚本代码，最后用FreeMarker模板生成文本。
